@@ -14,3 +14,12 @@ model student {
   major    String   @db.VarChar(50)
   createAt DateTime @default(now())
 }
+
+model subject {
+  id          Int    @id @default(autoincrement())
+  name        String @db.VarChar(50)
+  objective   String @db.VarChar(50)
+  description String @db.VarChar(100)
+  teacher     String @db.VarChar(50)
+  credit      Float
+}
